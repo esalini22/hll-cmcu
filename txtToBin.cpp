@@ -53,20 +53,22 @@ void readbin(string filename, int n) {
     
 int main(int argc, char *argv[]) {
 
-    if(argc !=3){
+    if(argc !=2){
 	    cout<<" faltan argumentos\n";
 	return 1; 
     }
 
-    int n = atoi(argv[2]); //cantidad de lineas
+    //int n = atoi(argv[2]); //cantidad de lineas
     string bname = string(argv[1]);
 
+    int n; //cantidad de lineas
+
     //cuenta lineas
-    /*FILE *fp;
+    FILE *fp;
     fp = fopen(argv[1], "rb");
     while(!feof(fp))
         if(fgetc(fp)=='\n') ++n;
-    fclose(fp);*/
+    fclose(fp);
 
     readtxtbin(bname,n);
     //readbin(bname+".bin",n);
